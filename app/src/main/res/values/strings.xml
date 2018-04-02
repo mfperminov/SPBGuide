@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SPBGuide</string>
+    <!--string that contains first menu position in Navigation Drawer-->
+    <string name="menu_attractions">Attractions</string>
+    <!--string that contains second menu position in Navigation Drawer-->
+    <string name="menu_museums">Museums</string>
+    <!--string that contains third menu position in Navigation Drawer-->
+    <string name="menu_theaters">Theaters</string>
+    <!--string that contains fourth menu position in Navigation Drawer-->
+    <string name="menu_pubs">Pubs</string>
+</resources>
