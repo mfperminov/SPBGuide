@@ -1,17 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?><!--android:background="?attr/colorPrimaryDark"-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="192dp"
-    android:background="?attr/colorPrimaryDark"
-    android:padding="16dp"
-    android:theme="@style/ThemeOverlay.AppCompat.Dark"
-    android:orientation="vertical"
-    android:gravity="bottom">
+    android:paddingTop="24dp"
+    android:background="@color/white"
+    android:theme="@style/ThemeOverlay.AppCompat.Light"
+    android:orientation="horizontal"
+    android:gravity="center">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="My header title"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
+    <ImageView
+        android:id="@+id/nav_header_image"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/image_border"
+        android:scaleType="centerInside"
+        android:src="@drawable/spb_pubs" />
+
+    <ImageView
+        android:layout_width="0dp"
+        android:layout_weight="2"
+        android:background="@drawable/image_border"
+        android:scaleType="centerInside"
+        android:layout_height="match_parent"
+        android:src="@drawable/spb_logo_text" />
 
 </LinearLayout>

@@ -5,7 +5,7 @@
     <!--string that contains second menu position in Navigation Drawer-->
     <string name="menu_museums">Museums</string>
     <!--string that contains third menu position in Navigation Drawer-->
-    <string name="menu_theaters">Theaters</string>
+    <string name="menu_concerts">Concerts</string>
     <!--string that contains fourth menu position in Navigation Drawer-->
     <string name="menu_pubs">Pubs</string>
 </resources>
