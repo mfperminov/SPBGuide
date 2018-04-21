@@ -1,6 +1,5 @@
 package com.example.mperminov.spbguide;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +8,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class MuseumsFragment extends Fragment {
+public class MuseumsFragment extends android.support.v4.app.Fragment {
     public MuseumsFragment() {
         // Required empty public constructor
     }
@@ -36,6 +35,9 @@ public class MuseumsFragment extends Fragment {
                 R.drawable.pavlovsk));
         PlaceAdapter placeAdapter = new PlaceAdapter(getActivity(), museums);
         ListView listView = rootView.findViewById(R.id.list);
+        listView.setAdapter(placeAdapter);
+        PlaceClickListener clickListener = new PlaceClickListener(getContext());
+        listView.setOnItemClickListener(clickListener);
         listView.setAdapter(placeAdapter);
         return rootView;
     }

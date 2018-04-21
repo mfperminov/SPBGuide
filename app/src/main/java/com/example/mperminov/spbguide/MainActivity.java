@@ -1,7 +1,5 @@
 package com.example.mperminov.spbguide;
 
-import android.app.Fragment;
-import android.app.FragmentTransaction;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -37,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                         ImageView navigationHeaderImage = hView.findViewById(R.id.nav_header_image);
                         int menuItemId = menuItem.getItemId();
                         int imageHeaderId = R.drawable.spb_attr;
-                        Fragment fragment = null;
+                        android.support.v4.app.Fragment fragment = null;
                         switch (menuItemId) {
                             case R.id.nav_attr:
                                 imageHeaderId = R.drawable.spb_attr;
@@ -53,11 +51,13 @@ public class MainActivity extends AppCompatActivity {
                                 break;
                             case R.id.nav_pubs:
                                 imageHeaderId = R.drawable.spb_pubs;
+                                fragment = new PubsFragment();
                                 break;
                         }
                         if (fragment != null) {
-                            FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                            //transaction.addToBackStack(null);
+                            android.support.v4.app.FragmentTransaction transaction =
+                                    getSupportFragmentManager().beginTransaction();
+                            transaction.addToBackStack(null);
                             transaction.replace(R.id.content_frame, fragment);
                             transaction.commit();
                         }

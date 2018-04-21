@@ -1,6 +1,5 @@
 package com.example.mperminov.spbguide;
 
-import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +8,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
-public class ConcertsFragment extends Fragment {
+public class ConcertsFragment extends android.support.v4.app.Fragment {
     public ConcertsFragment() {
         // Required empty public constructor
     }
@@ -35,5 +34,6 @@ public class ConcertsFragment extends Fragment {
         ListView listView = rootView.findViewById(R.id.list);
         listView.setAdapter(placeAdapter);
         return rootView;
+
     }
 }
