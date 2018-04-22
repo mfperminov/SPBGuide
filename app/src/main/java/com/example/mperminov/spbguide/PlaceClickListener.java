@@ -18,6 +18,7 @@ public class PlaceClickListener extends AppCompatActivity
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Place curPlace = (Place) parent.getItemAtPosition(position);
+        //intent for open google maps with name of place
         Uri mapUri = Uri.parse("geo:0,0?q=" + Uri.encode(curPlace.getmName()));
         Intent mapIntent = new Intent(Intent.ACTION_VIEW, mapUri);
         mapIntent.setPackage("com.google.android.apps.maps");

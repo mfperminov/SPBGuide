@@ -13,11 +13,11 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 /**
- * Custom adapter for Place object
+ * Custom adapter for Place object with date of event.
  */
 
-public class PlaceAdapter extends ArrayAdapter<Place> {
-    public PlaceAdapter(Activity context, ArrayList<Place> wordList) {
+public class PlaceDateAdapter extends ArrayAdapter<Place> {
+    public PlaceDateAdapter(Activity context, ArrayList<Place> wordList) {
         super(context, 0, wordList);
     }
 
@@ -27,7 +27,7 @@ public class PlaceAdapter extends ArrayAdapter<Place> {
         View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.list_item, parent, false);
+                    R.layout.list_item_wh, parent, false);
         }
         Place currentPlace = getItem(position);
         TextView nameTv = listItemView.findViewById(R.id.name);
@@ -36,6 +36,8 @@ public class PlaceAdapter extends ArrayAdapter<Place> {
         shortDescriptionTv.setText(currentPlace.getmShortDescription());
         ImageView photoIv = listItemView.findViewById(R.id.image);
         photoIv.setImageResource(currentPlace.getmImageId());
+        TextView daysUntilTv = listItemView.findViewById(R.id.days_until);
+        daysUntilTv.setText(currentPlace.daysUntil());
         return listItemView;
     }
 }

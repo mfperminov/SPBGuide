@@ -6,6 +6,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
+import java.time.LocalDate;
+import java.time.Month;
 import java.util.ArrayList;
 
 public class ConcertsFragment extends android.support.v4.app.Fragment {
@@ -20,17 +22,17 @@ public class ConcertsFragment extends android.support.v4.app.Fragment {
         ArrayList<Place> concerts = new ArrayList<>();
         concerts.add(new Place("Xiu Xiu",
                 "Museum Erarta",
-                R.drawable.xiu));
+                R.drawable.xiu, LocalDate.of(2018, Month.APRIL, 21)));
         concerts.add(new Place("Eyehategod",
                 "nightclub Mod",
-                R.drawable.eyehategod));
+                R.drawable.eyehategod, LocalDate.of(2018, Month.APRIL, 22)));
         concerts.add(new Place("Einar Stray",
                 "Yaani Kirik",
-                R.drawable.einar));
+                R.drawable.einar, LocalDate.of(2018, Month.APRIL, 25)));
         concerts.add(new Place("Thirty Seconds to Mars",
                 "SKK Arena",
-                R.drawable.stm));
-        PlaceAdapter placeAdapter = new PlaceAdapter(getActivity(), concerts);
+                R.drawable.stm, LocalDate.of(2018, Month.APRIL, 27)));
+        PlaceDateAdapter placeAdapter = new PlaceDateAdapter(getActivity(), concerts);
         ListView listView = rootView.findViewById(R.id.list);
         listView.setAdapter(placeAdapter);
         return rootView;

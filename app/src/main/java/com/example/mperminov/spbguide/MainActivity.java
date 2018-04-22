@@ -22,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mDrawerLayout = findViewById(R.id.drawer_layout);
         final NavigationView navigationView = findViewById(R.id.nav_view);
+        final ImageView logo = findViewById(R.id.splash);
+        logo.setImageResource(R.drawable.spb_logo_text);
         navigationView.setNavigationItemSelectedListener(
                 new NavigationView.OnNavigationItemSelectedListener() {
                     @Override
@@ -30,11 +32,13 @@ public class MainActivity extends AppCompatActivity {
                         menuItem.setChecked(true);
                         // close drawer when item is tapped
                         mDrawerLayout.closeDrawers();
-                        // update the image in the header based on selected item in menu
+                        // find ImageView in the header
                         View hView = navigationView.getHeaderView(0);
                         ImageView navigationHeaderImage = hView.findViewById(R.id.nav_header_image);
                         int menuItemId = menuItem.getItemId();
                         int imageHeaderId = R.drawable.spb_attr;
+                        //change fragment in FrameLayout based on chosen item menu
+                        //and update image in the header
                         android.support.v4.app.Fragment fragment = null;
                         switch (menuItemId) {
                             case R.id.nav_attr:
@@ -54,20 +58,25 @@ public class MainActivity extends AppCompatActivity {
                                 fragment = new PubsFragment();
                                 break;
                         }
+                        //transaction for fragments rotating
                         if (fragment != null) {
+                            logo.setVisibility(View.INVISIBLE);
                             android.support.v4.app.FragmentTransaction transaction =
                                     getSupportFragmentManager().beginTransaction();
                             transaction.addToBackStack(null);
                             transaction.replace(R.id.content_frame, fragment);
                             transaction.commit();
                         }
+                        //set the category image to header
                         navigationHeaderImage.setImageResource(imageHeaderId);
                         return true;
                     }
                 });
+        //activating custom toolbar
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         ActionBar actionbar = getSupportActionBar();
+        // "sandwich" icon on toolbar
         actionbar.setDisplayHomeAsUpEnabled(true);
         actionbar.setHomeAsUpIndicator(R.drawable.ic_menu);
 
@@ -75,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        //open the drawer when the user taps on the nav drawer button
         switch (item.getItemId()) {
             case android.R.id.home:
                 mDrawerLayout.openDrawer(GravityCompat.START);

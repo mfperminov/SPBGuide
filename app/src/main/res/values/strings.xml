@@ -8,4 +8,5 @@
     <string name="menu_concerts">Concerts</string>
     <!--string that contains fourth menu position in Navigation Drawer-->
     <string name="menu_pubs">Pubs</string>
+    <string name="splash">Logo of Saint-Petersburg</string>
 </resources>

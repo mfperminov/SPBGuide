@@ -21,20 +21,20 @@ public class PubsFragment extends Fragment {
         ArrayList<Place> pubs = new ArrayList<>();
         pubs.add(new Place("Wong Kar Wine",
                 "Wine bar and panasian cafe",
-                R.drawable.wong));
+                R.drawable.wong, "12noon-11pm"));
         pubs.add(new Place("Laboratoriya 31",
                 "Unusual bar",
-                R.drawable.lab31));
+                R.drawable.lab31, "3pm-6am"));
         pubs.add(new Place("Pivorama",
                 "Great consistent service",
-                R.drawable.pivrama));
+                R.drawable.pivrama, "12noon-11pm"));
         pubs.add(new Place("Saigon",
                 "Great people here",
-                R.drawable.saigon));
+                R.drawable.saigon, "10am-7am"));
         pubs.add(new Place("El Copitas",
                 "Great Place!",
-                R.drawable.elcapitos));
-        PlaceAdapter placeAdapter = new PlaceAdapter(getActivity(), pubs);
+                R.drawable.elcapitos, "Fri,Sat: 7pm-4am"));
+        PlaceTimeAdapter placeAdapter = new PlaceTimeAdapter(getActivity(), pubs);
         ListView listView = rootView.findViewById(R.id.list);
         listView.setAdapter(placeAdapter);
         return rootView;

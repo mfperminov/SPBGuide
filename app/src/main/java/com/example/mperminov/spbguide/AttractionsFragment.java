@@ -42,6 +42,7 @@ public class AttractionsFragment extends android.support.v4.app.Fragment {
                 R.drawable.isaac));
         PlaceAdapter placeAdapter = new PlaceAdapter(getActivity(), attractions);
         ListView listView = rootView.findViewById(R.id.list);
+        //on click - open google maps with query of attractions name
         PlaceClickListener clickListener = new PlaceClickListener(getContext());
         listView.setOnItemClickListener(clickListener);
         listView.setAdapter(placeAdapter);

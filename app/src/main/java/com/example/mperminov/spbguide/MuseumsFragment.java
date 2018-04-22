@@ -36,6 +36,7 @@ public class MuseumsFragment extends android.support.v4.app.Fragment {
         PlaceAdapter placeAdapter = new PlaceAdapter(getActivity(), museums);
         ListView listView = rootView.findViewById(R.id.list);
         listView.setAdapter(placeAdapter);
+        //on click - open google maps with query of museum name
         PlaceClickListener clickListener = new PlaceClickListener(getContext());
         listView.setOnItemClickListener(clickListener);
         listView.setAdapter(placeAdapter);
