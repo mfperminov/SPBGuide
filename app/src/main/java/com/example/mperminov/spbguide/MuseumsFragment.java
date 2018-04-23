@@ -18,20 +18,20 @@ public class MuseumsFragment extends android.support.v4.app.Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.place_list, container, false);
         ArrayList<Place> museums = new ArrayList<>();
-        museums.add(new Place("Hermitage Museum",
-                "Art & culture museum founded in 1764",
+        museums.add(new Place(getString(R.string.museum1),
+                getString(R.string.museum1_place),
                 R.drawable.hermitage));
-        museums.add(new Place("Russian Museum",
-                "Fine artworks, icons & sculptures",
+        museums.add(new Place(getString(R.string.museum2),
+                getString(R.string.museum2_place),
                 R.drawable.russian_museum));
-        museums.add(new Place("Russian cruiser Aurora",
-                "Floating museum on 20th-century warship",
+        museums.add(new Place(getString(R.string.museum3),
+                getString(R.string.museum3_place),
                 R.drawable.aurora));
-        museums.add(new Place("Kunstkamera",
-                "Anthropological & ethnographic museum",
+        museums.add(new Place(getString(R.string.museum4),
+                getString(R.string.museum4_place),
                 R.drawable.kunstkamera));
-        museums.add(new Place("Pavlovsk Palace",
-                "Palace, museum, and nature reserve.",
+        museums.add(new Place(getString(R.string.museum5),
+                getString(R.string.museum5_place),
                 R.drawable.pavlovsk));
         PlaceAdapter placeAdapter = new PlaceAdapter(getActivity(), museums);
         ListView listView = rootView.findViewById(R.id.list);

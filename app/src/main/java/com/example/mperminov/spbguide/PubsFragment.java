@@ -19,21 +19,21 @@ public class PubsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.place_list, container, false);
         ArrayList<Place> pubs = new ArrayList<>();
-        pubs.add(new Place("Wong Kar Wine",
-                "Wine bar and panasian cafe",
-                R.drawable.wong, "12noon-11pm"));
-        pubs.add(new Place("Laboratoriya 31",
-                "Unusual bar",
-                R.drawable.lab31, "3pm-6am"));
-        pubs.add(new Place("Pivorama",
-                "Great consistent service",
-                R.drawable.pivrama, "12noon-11pm"));
-        pubs.add(new Place("Saigon",
-                "Great people here",
-                R.drawable.saigon, "10am-7am"));
-        pubs.add(new Place("El Copitas",
-                "Great Place!",
-                R.drawable.elcapitos, "Fri,Sat: 7pm-4am"));
+        pubs.add(new Place(getString(R.string.pub1),
+                getString(R.string.pub1_desc),
+                R.drawable.wong, getString(R.string.pub1_workhours)));
+        pubs.add(new Place(getString(R.string.pub2),
+                getString(R.string.pub2_desc),
+                R.drawable.lab31, getString(R.string.pub2_workhours)));
+        pubs.add(new Place(getString(R.string.pub3),
+                getString(R.string.pub3_desc),
+                R.drawable.pivrama, getString(R.string.pub3_workhours)));
+        pubs.add(new Place(getString(R.string.pub4),
+                getString(R.string.pub4_desc),
+                R.drawable.saigon, getString(R.string.pub4_workhours)));
+        pubs.add(new Place(getString(R.string.pub5),
+                getString(R.string.pub5_desc),
+                R.drawable.elcapitos, getString(R.string.pub5_workhours)));
         PlaceTimeAdapter placeAdapter = new PlaceTimeAdapter(getActivity(), pubs);
         ListView listView = rootView.findViewById(R.id.list);
         listView.setAdapter(placeAdapter);

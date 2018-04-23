@@ -20,17 +20,17 @@ public class ConcertsFragment extends android.support.v4.app.Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.place_list, container, false);
         ArrayList<Place> concerts = new ArrayList<>();
-        concerts.add(new Place("Xiu Xiu",
-                "Museum Erarta",
+        concerts.add(new Place(getString(R.string.concert1),
+                getString(R.string.concert1_place),
                 R.drawable.xiu, LocalDate.of(2018, Month.APRIL, 21)));
-        concerts.add(new Place("Eyehategod",
-                "nightclub Mod",
+        concerts.add(new Place(getString(R.string.concert2),
+                getString(R.string.concert2_place),
                 R.drawable.eyehategod, LocalDate.of(2018, Month.APRIL, 22)));
-        concerts.add(new Place("Einar Stray",
-                "Yaani Kirik",
+        concerts.add(new Place(getString(R.string.concert3),
+                getString(R.string.concert3_place),
                 R.drawable.einar, LocalDate.of(2018, Month.APRIL, 25)));
-        concerts.add(new Place("Thirty Seconds to Mars",
-                "SKK Arena",
+        concerts.add(new Place(getString(R.string.concert4),
+                getString(R.string.concert4_place),
                 R.drawable.stm, LocalDate.of(2018, Month.APRIL, 27)));
         PlaceDateAdapter placeAdapter = new PlaceDateAdapter(getActivity(), concerts);
         ListView listView = rootView.findViewById(R.id.list);

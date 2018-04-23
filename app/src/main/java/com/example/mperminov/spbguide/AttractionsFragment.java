@@ -25,20 +25,20 @@ public class AttractionsFragment extends android.support.v4.app.Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.place_list, container, false);
         ArrayList<Place> attractions = new ArrayList<>();
-        attractions.add(new Place("Alexander Column",
-                "The focal point of Palace Square",
+        attractions.add(new Place(getString(R.string.attraction1),
+                getString(R.string.attraction1_desc),
                 R.drawable.alexander_column));
-        attractions.add(new Place("Peter and Paul Fortress",
-                "Original city site founded in 1703",
+        attractions.add(new Place(getString(R.string.attraction2),
+                getString(R.string.attraction2_desc),
                 R.drawable.peter_paul_fortress));
-        attractions.add(new Place("Nevsky Prospect",
-                "The main city street",
+        attractions.add(new Place(getString(R.string.attraction3),
+                getString(R.string.attraction3_desc),
                 R.drawable.nevsky));
-        attractions.add(new Place("Peterhof Palace",
-                "Seafront royal palace, park & museums",
+        attractions.add(new Place(getString(R.string.attraction4),
+                getString(R.string.attraction4_desc),
                 R.drawable.peterhof));
-        attractions.add(new Place("Saint Isaac's Cathedral",
-                "The largest orthodox basilica in the world.",
+        attractions.add(new Place(getString(R.string.attraction5),
+                getString(R.string.attraction5_desc),
                 R.drawable.isaac));
         PlaceAdapter placeAdapter = new PlaceAdapter(getActivity(), attractions);
         ListView listView = rootView.findViewById(R.id.list);

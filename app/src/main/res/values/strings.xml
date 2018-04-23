@@ -9,4 +9,51 @@
     <!--string that contains fourth menu position in Navigation Drawer-->
     <string name="menu_pubs">Pubs</string>
     <string name="splash">Logo of Saint-Petersburg</string>
+    <!--String resources for AttractionsFragment-->
+    <string name="attraction1">Alexander Column</string>
+    <string name="attraction2">Peter and Paul Fortress</string>
+    <string name="attraction3">Nevsky Prospect</string>
+    <string name="attraction4">Peterhof Palace</string>
+    <string name="attraction5">Saint Isaac\'s Cathedral</string>
+    <string name="attraction1_desc">The focal point of Palace Square</string>
+    <string name="attraction2_desc">Original city site founded in 1703</string>
+    <string name="attraction3_desc">The main city street</string>
+    <string name="attraction4_desc"><![CDATA[Seafront royal palace, park & museums]]></string>
+    <string name="attraction5_desc">The largest orthodox basilica in the world.</string>
+    <!--String resources for ConcertsFragment-->
+    <string name="concert1">Xiu Xiu</string>
+    <string name="concert1_place">Museum Erarta</string>
+    <string name="concert2">Eyehategod</string>
+    <string name="concert2_place">nightclub Mod</string>
+    <string name="concert3">Einar Stray</string>
+    <string name="concert3_place">Yaani Kirik</string>
+    <string name="concert4">Thirty Seconds to Mars</string>
+    <string name="concert4_place">SKK Arena</string>
+    <!--String resources for MuseumsFragment-->
+    <string name="museum1">Hermitage Museum</string>
+    <string name="museum1_place"><![CDATA[Art & culture museum founded in 1764]]></string>
+    <string name="museum2">Russian Museum</string>
+    <string name="museum2_place"><![CDATA[Fine artworks, icons & sculptures]]></string>
+    <string name="museum3">Russian cruiser Aurora</string>
+    <string name="museum3_place">Floating museum on 20th-century warship</string>
+    <string name="museum4">Kunstkamera</string>
+    <string name="museum4_place"><![CDATA[Anthropological & ethnographic museum]]></string>
+    <string name="museum5">Pavlovsk Palace</string>
+    <string name="museum5_place">Palace, museum, and nature reserve.</string>
+    <!--String resources for PubsFragment-->
+    <string name="pub1">Wong Kar Wine</string>
+    <string name="pub1_desc">Wine bar and panasian cafe</string>
+    <string name="pub1_workhours">12noon-11pm</string>
+    <string name="pub2">Laboratoriya 31</string>
+    <string name="pub2_desc">Unusual bar</string>
+    <string name="pub2_workhours">3pm-6am</string>
+    <string name="pub3">Pivorama</string>
+    <string name="pub3_desc">Great consistent service</string>
+    <string name="pub3_workhours">12noon-11pm</string>
+    <string name="pub4">Saigon</string>
+    <string name="pub4_desc">Great people here</string>
+    <string name="pub4_workhours">10am-7am</string>
+    <string name="pub5">El Copitas</string>
+    <string name="pub5_desc">Great Place!</string>
+    <string name="pub5_workhours">Fri,Sat: 7pm-4am</string>
 </resources>
